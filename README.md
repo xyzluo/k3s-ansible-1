@@ -34,10 +34,10 @@ Second, edit `inventory/my-cluster/hosts.ini` to match the system information ga
 
 ```ini
 [master]
-192.16.35.12
+10.250.154.175
 
 [node]
-192.16.35.[10:11]
+10.250.154.3
 
 [k3s_cluster:children]
 master
