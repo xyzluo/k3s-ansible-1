@@ -181,7 +181,7 @@ Since this may be your first time deploying an application to Kubernetes, let’
 > The Deployment object is now stored in the Kubernetes API. The existence of this object tells Kubernetes that the luksa/kubia:1.0 container must run in your cluster. You’ve stated your desired state. Kubernetes must now ensure that the actual state reflects your wishes.
 
 > To help you visualize what happened when you created the Deployment, see figure 3.9.
-![Figure 3.9 How creating a Deployment object results in a running application container](/home/epi/gary/github/k3s-ansible-official/resource/3.9.png)
+![Figure 3.9 How creating a Deployment object results in a running application container](/home/epi/gary/github/k3s-ansible-1/resource/3.9.png)
 Figure 3.9 How creating a Deployment object results in a running application container 
 
 When you ran the kubectl create command, it created a new Deployment object in the cluster by sending an HTTP request to the Kubernetes API server. Kubernetes then created a new Pod object, which was then assigned or scheduled to one of the worker nodes. The Kubernetes agent on the worker node (the Kubelet) became aware of the newly created Pod object, saw that it was scheduled to its node, and instructed Docker to pull the specified image from the registry, create a container from the image, and execute it.
