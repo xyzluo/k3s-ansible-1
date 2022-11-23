@@ -129,7 +129,7 @@ sudo kubectl get pods -n traefik-v2 --selector "app.kubernetes.io/name=traefik" 
 sudo kubectl port-forward -n traefik-v2 pod/traefik-d47795995-68ctl 9000:9000
 ```
 
-Token
+Token example:
 > K101ccd4b2ee313a904b2df9d9058ed9078a4ea0e11a1603fbb2f8ce4f290a8ef66::server:554813bd8ee1965985fc8e3482f4b006
 
 ### Traefic dashboard
