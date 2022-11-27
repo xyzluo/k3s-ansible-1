@@ -5,3 +5,6 @@ As in the introduction, one of the reasons for switching from Kind to K3S is the
 multipass start k3s-master
 multipass start k3s-agent
 ```
+
+# example deploy a nodejs app to k3s cluster
+./nodejs_app
