@@ -1,0 +1,6 @@
+users:
+  - default
+  - name: ubuntu
+    sudo: ALL=(ALL) NOPASSWD:ALL
+    ssh_authorized_keys:
+    - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCbeU5FW0Ow+GXpToq946uaNkePN/KKGD6dY2EpxvW7m2dkOnno5UpSFxUiYFmtlyA0suchoN+y3fNZDubOgAH6nhvtP4mssey+N0mKoQXn1SqEkdDGhZDNawRA0IzJBV2v+Yy3IkJvavqfPHtNJTvXrdtJkrywrQcfucpvhuaDGJ0BGe0kFmpmgsdlqr5lUSM5xf35x/0EgjEj809kRJmcx+jY9No4cSa+kKnjNF3pbu9OwgsAL9xctbY6K3TYSesEBWpFcJUVnEC+UZoQrHUzdlUZ68odNJrk2ZHoSpdva894i7vm73zI4wNMCY0cb30h9/9G1/t7e9Y5mlcFec01 epi@epi-desktop
