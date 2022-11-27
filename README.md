@@ -84,7 +84,7 @@ Now K3S cluster is created.
 
 - copy master node's /etc/rancher/k3s/k3s.yaml to host's ~/.kube/config
 
-- replace 127.0.0.1 to master node's ip address (by multipass list)
+- replace 127.0.0.1 to master node's ip address (by `multipass list`) and and configure to skip TLS verification.
   now you can run from host: `kubectl get nodes` and get same return as run this from master node: `sudo kubectl get nodes`
 
 ### commands work for host and each node
@@ -123,7 +123,7 @@ helm install --namespace=traefik-v2 --values=./values.yaml traefik traefik/traef
 # verify Traefic pods have been started
 sudo kubectl get pods -n=traefik-v2 -o wide
 sudo kubectl get pods -n traefik-v2 --selector "app.kubernetes.io/name=traefik" --output name
-# output: pod/traefik-d47795995-68ctl
+# output: pod/traefik-d47795995-68ctl  ==> we use this for port forwadd
 
 # port forward
 sudo kubectl port-forward -n traefik-v2 pod/traefik-d47795995-68ctl 9000:9000
@@ -247,4 +247,4 @@ deployment.apps/kubia scaled
 
 You’ve now told Kubernetes that you want to run three exact copies or replicas of your pod. Note that you haven’t instructed Kubernetes what to do. You haven’t told it to add two more pods. You just set the new desired number of replicas and let Kubernetes determine what action it must take to reach the new desired state.
 
-This is one of the most fundamental principles in Kubernetes. Instead of telling Kubernetes what to do, you simply set a new desired state of the system and let Kubernetes achieve it. To do this, it examines the current state, compares it with the desired state, identifies the differences and determines what it must do to reconcile them.
+**This is one of the most fundamental principles in Kubernetes**. Instead of telling Kubernetes what to do, you simply set a new desired state of the system and let Kubernetes achieve it. To do this, it examines the current state, compares it with the desired state, identifies the differences and determines what it must do to reconcile them.
